@@ -1,0 +1,45 @@
+#iframe-container {
+    position: fixed;
+    height: 70px;
+    z-index: 199;
+    display: flex;
+    user-select: none;
+    bottom: 1rem;
+    left: calc(100vw - 240px);
+}
+
+#Microsoft_Omnichannel_LCWidget_Chat_Iframe_Window.web_chat_panel {
+    position: absolute !important;
+    right: -163px !important;
+    bottom: 0 !important;
+}
+
+#handle-icon {
+    width: 24px;
+    height: 24px;
+    cursor: url("imgs/grab.svg") 0 0, grab;
+    padding: 4px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#handle-icon:hover svg {
+    fill: #358717;
+}
+
+#handle-icon.moving::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#iframe-container:hover #handle-icon {
+    opacity: 1;
+}
+
+.unselectable {
+    pointer-events: none;
+}
