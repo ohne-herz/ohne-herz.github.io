@@ -8,10 +8,16 @@
     left: calc(100vw - 240px);
 }
 
+#Microsoft_Omnichannel_LCWidget_Chat_Iframe_Window {
+    inset: auto !important;
+}
+
 #Microsoft_Omnichannel_LCWidget_Chat_Iframe_Window.web_chat_panel {
     position: absolute !important;
     right: -163px !important;
     bottom: 0 !important;
+    width: 370px !important;
+    height: min(570px, calc(100vh - 45px)) !important;
 }
 
 #handle-icon {
@@ -42,4 +48,15 @@
 
 .unselectable {
     pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+    #handle-icon {
+        opacity: 1;
+        display: none;
+    }
+    #handle-icon svg {
+        fill: #358717;
+    }
+    
 }
